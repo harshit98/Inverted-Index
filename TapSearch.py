@@ -32,13 +32,15 @@ class DataProcessing:
 def load_app():
     return render_template('index.html')
 
-@app.route('/', methods=['POST'])
+@app.route('/load_document', methods=['POST'])
 def index():
     document = request.values.get('document')
     data = DataProcessing()
 
     processed_paragraphs = data.paragraphs(document)
-    paragraphs = processed_paragraphs
+    # paragraphs = processed_paragraphs
+    for para in processed_paragraphs:
+        paragraphs.append(para)
 
     # occurence_dict = dict()
     docId = 1
@@ -65,7 +67,7 @@ def search():
             ans.append(paragraphs[index[word][0] - 1])
         else:
             continue
-    
+
     return render_template('index.html', ans=ans)
     
     # def clear():
@@ -73,4 +75,4 @@ def search():
 
 # main function
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

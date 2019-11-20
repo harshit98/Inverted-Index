@@ -20,17 +20,23 @@
             </p>
             <input name="search" placeholder="Enter the word">
 	        <input class="search-btn" type="submit" value="Search">
-        </form>
-	    <br>
-	    <p class="heading">
-            Paragraphs with Searched Word
-        </p>
-        {% for i in ans %}
-            <p>working...</p>
-	        <p> 
-                {{ i }} 
+	        <br>
+	        <p class="heading">
+                Paragraphs with Searched Word
             </p>
-            <br>
-	    {% endfor %}
+            {% for i in ans %}
+	            <p> {{ i }} </p>
+                <br>
+            {% endfor %}
+        </form>
+        <p class="clear">
+            Clear document indexes
+        </p>
+        <button onclick="showAlert()" class="clear-btn">Clear</button>
+        <script>
+            function showAlert() {
+                alert("All indexed documents are cleared!");
+            }
+        </script>
     </body>
 </html>
