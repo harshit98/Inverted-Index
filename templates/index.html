@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title> TapSearch </title>
+        <meta charset="UTF-8"/>
+    </head>
+  
+    <body>
+        <img height=80 width=80 src="../static/tapchief.png">
+        <h1> TapSearch </h1>	
+        <form action="/load_document" method="POST">
+            <p class="heading">
+                Input the Document
+            </p>
+            <textarea rows="6" cols="60" name="document"></textarea>
+        </form>
+        <form action="/search" method="GET">
+            <p class="heading">
+                Search Word
+            </p>
+            <input name="search" placeholder="Enter the word">
+	        <input class="search-btn" type="submit" value="Search">
+        </form>
+	    <br>
+	    <p class="heading">
+            Paragraphs with Searched Word
+        </p>
+        {% for i in ans %}
+            <p>working...</p>
+	        <p> 
+                {{ i }} 
+            </p>
+            <br>
+	    {% endfor %}
+    </body>
+</html>
