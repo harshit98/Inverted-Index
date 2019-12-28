@@ -1,3 +1,5 @@
-# TapChief Project Assignment
+# Inverted Index
 
-TapChief Project Assignment for Software Engineering Intern Position.
+TODO: clear() method not working. Document indexing is working.
+
+![Homepage]('./static/homepage.png)

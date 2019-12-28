@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        <title> TapSearch </title>
+        <title> Inverted Index </title>
         <meta charset="UTF-8"/>
     </head>
   
@@ -14,15 +14,15 @@
             <textarea rows="6" cols="60" name="document"></textarea>
         </form>
         <form action="/search" method="GET">
-            <p class="heading">
+            <h3 class="heading">
                 Search Word
-            </p>
+            </h3>
             <input name="search" placeholder="Enter the word">
 	        <input class="search-btn" type="submit" value="Search">
 	        <br>
-	        <p class="heading">
+	        <h3 class="heading">
                 Paragraphs with Searched Word
-            </p>
+            </h3>
             {% for i in ans %}
 	            <p> {{ i }} </p>
                 <br>

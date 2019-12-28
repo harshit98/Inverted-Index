@@ -28,6 +28,7 @@ class DataProcessing:
         
         return original
 
+
 @app.route('/')
 def load_app():
     return render_template('index.html')
