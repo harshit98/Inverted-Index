@@ -2,4 +2,4 @@
 
 TODO: clear() method not working. Document indexing is working.
 
-![Homepage]('./static/homepage.png)
+![Homepage]('static/homepage.png)
